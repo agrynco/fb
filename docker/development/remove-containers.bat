@@ -1,0 +1,12 @@
+docker stop family_budget_develop_seq
+docker stop family_budget_develop_api
+docker stop family_budget_develop_mysql
+docker stop family_budget_develop_rabbitmq
+
+docker rm family_budget_develop_seq
+docker rm family_budget_develop_api
+docker rm family_budget_develop_mysql
+docker rm family_budget_develop_rabbitmq
+
+docker volume rm family_budget_develop_mysql-data
+docker volume rm family_budget_develop_seq-data

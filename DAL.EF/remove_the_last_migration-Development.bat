@@ -1,0 +1,1 @@
+CALL remove_the_last_migration.bat Development

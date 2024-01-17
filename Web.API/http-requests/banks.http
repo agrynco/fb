@@ -1,0 +1,9 @@
+### Income/Outcome
+POST {{apiUrl}}/banks
+Authorization: {{authorization}}
+Content-Type: application/json
+
+{
+  "name": "test bank",
+  "description": "test bank description"
+}

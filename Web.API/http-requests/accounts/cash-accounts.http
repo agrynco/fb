@@ -1,0 +1,12 @@
+###
+POST {{apiUrl}}/accounts/cash
+Content-Type: application/json
+Authorization: {{authorization}}
+
+{
+  "name": "test",
+  "description": "test",
+  "closed": false,
+  "currencyId": "1"
+}
+

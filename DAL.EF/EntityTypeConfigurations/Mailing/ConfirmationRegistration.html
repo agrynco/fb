@@ -1,0 +1,27 @@
+<header>
+    <h1>Підтвердження реєстрації</h1>
+    <meta charset="UTF-8">
+    <style>
+        .greeting {
+            font-weight: bold;
+        }
+
+        .normal {
+            font-size: 1.2em;
+        }
+    </style>
+</header>
+
+<div class="normal">
+    <p>Доброго дня, <span class="greeting">{{FirstName}} {{LastName}}!</span></i></p>
+
+    <p>Ви зареєструвалися на сайті <a href="{{SiteUrl}}">{{SiteName}}</a>.</p>
+
+    <p>Для підтвердження реєстрації перейдіть за посиланням: <a
+            href="{{SiteUrl}}/confirm-email?token={{EmailConfirmationToken}}">{{SiteUrl}}/confirm-email?token={{EmailConfirmationToken}}</a>
+    </p>
+
+    <p>Якщо ви не реєструвалися на сайті <a href="{{SiteUrl}}">{{SiteName}}</a>, то просто проігноруйте цей лист.</p>
+</div>
+
+<p>З повагою, <a href="{{SiteUrl}}">{{SiteName}}</a>.</p>

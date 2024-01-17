@@ -1,0 +1,9 @@
+###
+GET {{apiUrl}}/accounts/my?page=0&size=10&sort=name&order=asc&search=
+Content-Type: application/json
+Authorization: {{authorization}}
+
+###
+GET {{apiUrl}}/accounts/1
+Content-Type: application/json
+Authorization: {{authorization}}

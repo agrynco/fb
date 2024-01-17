@@ -1,0 +1,4 @@
+### 
+GET {{apiUrl}}/transaction-categories/my
+Authorization: {{authorization}}
+Content-Type: application/json

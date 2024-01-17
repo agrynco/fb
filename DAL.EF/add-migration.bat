@@ -1,0 +1,1 @@
+dotnet ef --startup-project ../Web.API migrations add %1

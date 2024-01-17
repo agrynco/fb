@@ -1,0 +1,1 @@
+CALL update_db_with_migrator.bat Development

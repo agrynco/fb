@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="API + MailSender" type="CompoundRunConfigurationType">
+    <toRun name="Web.API" type="LaunchSettings" />
+    <toRun name="MailSender.Console" type="DotNetProject" />
+    <method v="2" />
+  </configuration>
+</component>

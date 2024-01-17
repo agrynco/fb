@@ -1,0 +1,37 @@
+###
+GET {{apiUrl}}/accounts/bank/my
+Content-Type: application/json
+Authorization: {{authorization}}
+
+###
+GET {{apiUrl}}/accounts/bank/9
+Content-Type: application/json
+Authorization: {{authorization}}
+
+###
+PUT {{apiUrl}}/accounts/bank/9
+Content-Type: application/json
+Authorization: {{authorization}}
+
+{
+  "IBAN": "1234567890123456",
+  "name": "test",
+  "description": "test",
+  "closed": false,
+  "currencyId": "1",
+  "bankId": 1
+}
+
+###
+POST {{apiUrl}}/accounts/bank
+Content-Type: application/json
+Authorization: {{authorization}}
+
+{
+  "IBAN": "1222567890123356",
+  "name": "test bank account 2",
+  "description": "test bank account",
+  "closed": false,
+  "currencyId": "1",
+  "bankId": 1
+}

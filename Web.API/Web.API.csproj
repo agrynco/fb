@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-Web.API-976A63D8-26CD-433B-BD4A-874D54436681</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <Company>GrynCo</Company>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <DocumentationFile>bin\Debug\Web.API.xml</DocumentationFile>
+        <NoWarn>1701;1702;1591</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DocumentationFile>bin\Release\Web.API.xml</DocumentationFile>
+        <NoWarn>1701;1702;1591</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="12.0.1"/>
+        <PackageReference Include="DevExtreme.AspNet.Core" Version="23.2.3" />
+        <PackageReference Include="IchAtGithub.Serilog.Formatting.Compact" Version="1.0.1"/>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="8.0.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.2.3"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Identity.Web" Version="2.16.0"/>
+        <PackageReference Include="Serilog.AspNetCore" Version="8.0.0"/>
+        <PackageReference Include="Serilog.AspNetCore.Enrichers.CorrelationId" Version="1.0.0" />
+        <PackageReference Include="Serilog.Enrichers.AspnetcoreHttpcontext" Version="1.1.0"/>
+        <PackageReference Include="Serilog.Enrichers.Claim" Version="1.0.0"/>
+        <PackageReference Include="Serilog.Enrichers.Environment" Version="3.0.0-dev-00806"/>
+        <PackageReference Include="Serilog.Enrichers.ExceptionData" Version="1.0.0"/>
+        <PackageReference Include="Serilog.Enrichers.Memory" Version="1.0.4"/>
+        <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.1-dev-00561"/>
+        <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1"/>
+        <PackageReference Include="Serilog.Sinks.Seq" Version="6.0.0"/>
+        <PackageReference Include="SlimMessageBus" Version="2.0.1"/>
+        <PackageReference Include="SlimMessageBus.Host" Version="2.2.0" />
+        <PackageReference Include="SlimMessageBus.Host.AspNetCore" Version="2.2.0" />
+        <PackageReference Include="SlimMessageBus.Host.Configuration" Version="2.0.5" />
+        <PackageReference Include="SlimMessageBus.Host.Interceptor" Version="2.0.1"/>
+        <PackageReference Include="SlimMessageBus.Host.Memory" Version="2.2.0" />
+        <PackageReference Include="SlimMessageBus.Host.Serialization" Version="2.0.1"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="..\.dockerignore">
+            <Link>.dockerignore</Link>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Common\Common.csproj"/>
+        <ProjectReference Include="..\DAL.EF.Migrator\DAL.EF.Migrator.csproj"/>
+        <ProjectReference Include="..\DAL.EF\DAL.EF.csproj"/>
+        <ProjectReference Include="..\DI\DI.csproj"/>
+        <ProjectReference Include="..\Logging\Logging.csproj" />
+        <ProjectReference Include="..\Services\Services.csproj"/>
+        <ProjectReference Include="..\Web.API.Models\Web.API.Models.csproj"/>
+    </ItemGroup>
+
+</Project>

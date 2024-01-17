@@ -1,0 +1,1 @@
+docker-compose -f docker-compose.yml -p family_budget_develop restart

@@ -1,0 +1,61 @@
+### Income/Outcome
+POST {{apiUrl}}/transactions/
+Authorization: {{authorization}}
+Content-Type: application/json
+
+{
+  "sourceAccountId": 9,
+  "amount": 1000,
+  "description": "Income"
+}
+
+### Income/Outcome
+PUT {{apiUrl}}/transactions/1
+Authorization: {{authorization}}
+Content-Type: application/json
+
+{
+  "sourceAccountId": 9,
+  "amount": -10,
+  "description": "Outcome"
+}
+
+### Modify transfer to income/outcome
+PUT {{apiUrl}}/transactions/17
+Authorization: {{authorization}}
+Content-Type: application/json
+
+{
+  "sourceAccountId": 9,
+  "amount": 10,
+  "description": "Modify transfer to income/outcome"
+}
+
+### Transfer between the same currencies
+POST {{apiUrl}}/transactions/
+Authorization: {{authorization}}
+Content-Type: application/json
+
+{
+  "sourceAccountId": 9,
+  "destinationAccountId": 2,
+  "amount": 10,
+  "description": "Test transfer transaction"
+}
+
+### Transfer between different currencies
+POST {{apiUrl}}/transactions/
+Authorization: {{authorization}}
+Content-Type: application/json
+
+{
+  "sourceAccountId": 1,
+  "destinationAccountId": 5,
+  "amount": 1000,
+  "exchangeRate": 1,
+  "description": "Поповнення картки"
+}
+
+###
+GET {{apiUrl}}/transactions
+Authorization: {{authorization}}

@@ -1,0 +1,32 @@
+###
+GET {{apiUrl}}/accounts/card/my
+Content-Type: application/json
+Authorization: {{authorization}}
+
+###
+PUT {{apiUrl}}/accounts/card/6
+Content-Type: application/json
+Authorization: {{authorization}}
+
+{
+  "cardNumber": "1234567890123456",
+  "name": "test",
+  "description": "test",
+  "closed": false,
+  "currencyId": "1",
+  "bankId": 1
+}
+
+###
+POST {{apiUrl}}/accounts/card
+Content-Type: application/json
+Authorization: {{authorization}}
+
+{
+  "cardNumber": "1222567890123456",
+  "name": "test card",
+  "description": "test card",
+  "closed": false,
+  "currencyId": "1",
+  "bankId": 1
+}
